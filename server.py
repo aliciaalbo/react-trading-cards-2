@@ -71,15 +71,15 @@ def show_cards():
 def get_cards_json():
     """Return a JSON response with all cards in DB."""
 
-    # cards = Card.query.all()
-    # cards_list = []
+    cards = Card.query.all()
+    cards_list = []
 
-    # for c in DATA["cards"]:
-    #     cards_list.append({"skill": c.skill, "name": c.name, "imgUrl": c.image_url})
+    for c in cards["cards"]:
+        cards_list.append({"skill": c.skill, "name": c.name, "imgUrl": c.image_url})
 
-
-    # return jsonify({"cards": cards_list})
-    return jsonify(DATA["cards"])
+    print(cards)
+    return jsonify({"cards": cards_list})
+    # return jsonify(DATA["cards"])
 
 @app.route("/add-card", methods=["POST"])
 def add_card():

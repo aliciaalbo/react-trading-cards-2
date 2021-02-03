@@ -45,7 +45,7 @@ function TradingCardContainer() {
   }, [])
 
   const tradingCards = [];
-
+  
 
   for (const currentCard of cards) {
     tradingCards.push(
@@ -62,6 +62,8 @@ function TradingCardContainer() {
     <div>{tradingCards}</div>
   );
 }
+
+
 
 ReactDOM.render(
   <TradingCardContainer />,

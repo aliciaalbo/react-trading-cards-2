@@ -3,6 +3,18 @@
 {% block title %} Cards {% endblock %}
 
 {% block body %}
+
+<!-- ***Add div and new card form -->
+	<div>
+		<h2>Add New Trading Card</h2>
+		<form id=add-card" action="/add-card" method="POST"></form>
+			Name <input type="text" name="name" id="nameField">
+			Skill <input type="text" name="skill" id="skillField">
+		<button id="addCard">Add</button>
+		</form>
+		<h2>Trading Cards</h2>
+	  </div>
+	  
 	<div id="container"></div>
 {% endblock %}
 
